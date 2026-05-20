@@ -1,28 +1,29 @@
 // import React from "react";
-"use client";
+// "use client";
 
 import { Button } from "@heroui/react";
 import Link from "next/link";
 import Image from "next/image";
+import Navlinks from "./Navlinks";
 
 const Nav = () => {
   const links = (
     <>
-      <Link href="/" className="p-2">
+      <Navlinks href="/">
         Home
-      </Link>
-      <Link href="/ideas" className="p-2">
+      </Navlinks>
+      <Navlinks href="/ideas">
         Ideas
-      </Link>
-      <Link href="/addIdeas" className="p-2">
+      </Navlinks>
+      <Navlinks href="/addIdeas">
         Add Idea
-      </Link>
-      <Link href="/myIdeas" className="p-2">
+      </Navlinks>
+      <Navlinks href="/myIdeas">
         My Ideas
-      </Link>
-      <Link href="/myInteractions" className="p-2">
+      </Navlinks>
+      <Navlinks href="/myInteractions">
         My Interactions
-      </Link>
+      </Navlinks>
     </>
   );
   return (
@@ -69,7 +70,7 @@ const Nav = () => {
         </div>
         <div className="navbar-center">
           <Link href="/">
-            <h1>IdeaVault</h1>
+            <h1 className="text-xl font-bold text-orange-500">IdeaVault</h1>
           </Link>
         </div>
 
