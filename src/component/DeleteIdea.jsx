@@ -28,7 +28,7 @@ export function DeleteIdea({ idea }) {
       >
         <TrashBin></TrashBin>Delete
       </Button>
-      <AlertDialog.Backdrop>
+      <AlertDialog.Backdrop variant="blur">
         <AlertDialog.Container>
           <AlertDialog.Dialog className="sm:max-w-[400px]">
             <AlertDialog.CloseTrigger />

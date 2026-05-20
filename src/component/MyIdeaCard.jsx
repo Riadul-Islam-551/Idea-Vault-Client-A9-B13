@@ -3,6 +3,7 @@ import { Button, Card, CloseButton } from "@heroui/react";
 import Image from "next/image";
 import React from "react";
 import { DeleteIdea } from "./DeleteIdea";
+import { EditIdea } from "./EditIdea";
 
 const MyIdeaCard = ({ idea }) => {
   const {
@@ -47,9 +48,7 @@ const MyIdeaCard = ({ idea }) => {
               <span className="text-xs text-muted">Category : {category}</span>
             </div>
             <div className="flex items-center justify-end space-x-2 ">
-              <Button className="w-full sm:w-auto bg-orange-500 rounded ">
-                <Pencil></Pencil> Edit
-              </Button>
+              <EditIdea idea={idea}></EditIdea>
               <DeleteIdea idea={idea}></DeleteIdea>
             </div>
           </Card.Footer>

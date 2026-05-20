@@ -99,7 +99,7 @@ const AddIdeaPage = () => {
             placeholder="Select category"
           >
             <Label>Category</Label>
-            <Select.Trigger className="rounded-2xl">
+            <Select.Trigger className="rounded-xl bg-base-300 ">
               <Select.Value />
               <Select.Indicator />
             </Select.Trigger>
