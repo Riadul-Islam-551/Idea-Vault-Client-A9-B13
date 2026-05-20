@@ -10,6 +10,7 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 
 const LoginPage = () => {
@@ -41,7 +42,7 @@ const LoginPage = () => {
       <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl text-center mb-12">
         Login Account
       </h1>
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-2xl mx-auto border border-gray-300 p-4 rounded-xl ">
         <Form className="flex flex-col gap-4" onSubmit={handleSubmit}>
           {/* email */}
           <TextField
@@ -92,6 +93,12 @@ const LoginPage = () => {
             </Button>
           </div>
         </Form>
+        <p className="mt-3 text-center text-xs ">
+          don&apos;t Have any account?
+          <Link href={"/registration"} className=" text-orange-500">
+            Registration
+          </Link>
+        </p>
       </div>
     </div>
   );
