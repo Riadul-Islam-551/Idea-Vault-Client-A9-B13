@@ -30,7 +30,7 @@ export function DeleteIdea({ idea }) {
       </Button>
       <AlertDialog.Backdrop variant="blur">
         <AlertDialog.Container>
-          <AlertDialog.Dialog className="sm:max-w-[400px]">
+          <AlertDialog.Dialog className="sm:max-w-100">
             <AlertDialog.CloseTrigger />
             <AlertDialog.Header>
               <AlertDialog.Icon status="danger" />

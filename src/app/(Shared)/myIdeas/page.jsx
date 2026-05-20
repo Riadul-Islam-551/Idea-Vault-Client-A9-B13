@@ -11,12 +11,12 @@ const MyIdeasPage = async () => {
   });
 
   const myId = session?.user?.id;
-  console.log(myId);
+  // console.log(myId);
 
   const res = await fetch(`http://localhost:5000/ideas/${myId}`);
   const myIdea = await res.json();
 
-  console.log(myIdea);
+  // console.log(myIdea);
 
   return (
     <div className="container mx-auto px-4">

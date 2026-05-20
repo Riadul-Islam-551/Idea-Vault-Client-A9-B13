@@ -6,7 +6,7 @@ import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
 
 export function CommentModal({ ideaDetails }) {
   const ideaId = ideaDetails._id;
-  console.log(ideaId);
+  //   console.log(ideaId);
 
   const { data: session } = authClient.useSession();
 
@@ -26,7 +26,7 @@ export function CommentModal({ ideaDetails }) {
       time: new Date(),
       image: session?.user?.image,
     };
-    console.log("comment", commentData);
+    // console.log("comment", commentData);
 
     const res = await fetch("http://localhost:5000/comments", {
       method: "POST",
@@ -38,8 +38,9 @@ export function CommentModal({ ideaDetails }) {
     const data = await res.json();
     if (data.insertedId) {
       alert("Thanks for your feedback");
+      window.location.reload();
     }
-    console.log(data);
+    // console.log(data);
   };
 
   return (
