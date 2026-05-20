@@ -9,21 +9,11 @@ import Navlinks from "./Navlinks";
 const Nav = () => {
   const links = (
     <>
-      <Navlinks href="/">
-        Home
-      </Navlinks>
-      <Navlinks href="/ideas">
-        Ideas
-      </Navlinks>
-      <Navlinks href="/addIdeas">
-        Add Idea
-      </Navlinks>
-      <Navlinks href="/myIdeas">
-        My Ideas
-      </Navlinks>
-      <Navlinks href="/myInteractions">
-        My Interactions
-      </Navlinks>
+      <Navlinks href="/">Home</Navlinks>
+      <Navlinks href="/ideas">Ideas</Navlinks>
+      <Navlinks href="/addIdeas">Add Idea</Navlinks>
+      <Navlinks href="/myIdeas">My Ideas</Navlinks>
+      <Navlinks href="/myInteractions">My Interactions</Navlinks>
     </>
   );
   return (
@@ -75,12 +65,18 @@ const Nav = () => {
         </div>
 
         <div className="navbar-end">
-          <Link href={"/login"}>
-            <Button>Login</Button>
-          </Link>
-          <Link href={"/registration"}>
-            <Button>Registration</Button>
-          </Link>
+          <div className="space-x-2">
+            <Link href={"/login"}>
+              <Button variant="outline" className={"border-orange-500 text-orange-500"}>
+                Login
+              </Button>
+            </Link>
+            <Link href={"/registration"}>
+              <Button className={"bg-orange-500 text-white"}>
+                Registration
+              </Button>
+            </Link>
+          </div>
 
           {/* {session == undefined ? (
             <Spinner></Spinner>
