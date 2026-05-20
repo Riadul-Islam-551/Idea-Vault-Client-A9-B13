@@ -35,7 +35,7 @@ const SignupPage = () => {
       alert("something went wrong");
     }
 
-    console.log({ data, error });
+    // console.log({ data, error });
 
     // console.log(user);
   };
@@ -117,7 +117,9 @@ const SignupPage = () => {
             </Button>
           </div>
         </Form>
-        <div className="text-center text-sm text-gray-600 ">or sign in with</div>
+        <div className="text-center text-sm text-gray-600 ">
+          or sign in with
+        </div>
         <Button
           // onClick={handleGoogleSignin}
           className="w-full rounded "

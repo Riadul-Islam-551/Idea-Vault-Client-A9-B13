@@ -1,12 +1,21 @@
 // import React from "react";
-// "use client";
+"use client";
 
-import { Button } from "@heroui/react";
+import { Avatar, Button, Spinner } from "@heroui/react";
 import Link from "next/link";
 import Image from "next/image";
 import Navlinks from "./Navlinks";
+import { authClient } from "@/lib/auth-client";
+import { Person } from "@gravity-ui/icons";
 
 const Nav = () => {
+  const { data: session } = authClient.useSession();
+  const user = session?.user;
+
+  const handleLogOut = async () => {
+    await authClient.signOut();
+  };
+
   const links = (
     <>
       <Navlinks href="/">Home</Navlinks>
@@ -65,9 +74,12 @@ const Nav = () => {
         </div>
 
         <div className="navbar-end">
-          <div className="space-x-2">
+          {/* <div className="space-x-2">
             <Link href={"/login"}>
-              <Button variant="outline" className={"border-orange-500 text-orange-500"}>
+              <Button
+                variant="outline"
+                className={"border-orange-500 text-orange-500"}
+              >
                 Login
               </Button>
             </Link>
@@ -76,21 +88,19 @@ const Nav = () => {
                 Registration
               </Button>
             </Link>
-          </div>
+          </div> */}
 
-          {/* {session == undefined ? (
-            <Spinner></Spinner>
-          ) : user ? (
+          {user ? (
             <>
               <Avatar>
                 <Avatar.Image alt="John Doe" src={user?.image} />
                 <Avatar.Fallback>JD</Avatar.Fallback>
               </Avatar>
-              <Link href="/profile" className="hidden lg:block ">
+              {/* <Link href="/profile" className="hidden lg:block ">
                 <Button variant="ghost">
                   <Person></Person> Profile
                 </Button>
-              </Link>
+              </Link> */}
               <Button variant="outline" onClick={handleLogOut}>
                 Logout
               </Button>
@@ -98,13 +108,13 @@ const Nav = () => {
           ) : (
             <>
               <Link href="/login">
-                <Button variant="ghost">Login</Button>
+                <Button variant="outline">Login</Button>
               </Link>
-              <Link href="/signup">
-                <Button variant="ghost">Sign up</Button>
+              <Link href="/registration">
+                <Button variant="outline">Registration</Button>
               </Link>
             </>
-          )} */}
+          )}
         </div>
       </div>
     </div>
