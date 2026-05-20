@@ -2,17 +2,18 @@ import React from "react";
 
 const Methodology = () => {
   return (
-    <div className="container mx-auto px-3  my-12 ">
+    <div className="container mx-auto px-7 my-16 ">
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">
         Services
       </h1>
+      <p className="text-gray-600 text-center my-3 mb-8 ">By the end of the services, you don’t just have an idea <br /> you have a validated concept shaped by real feedback from a creative community.</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6 gap-12 ">
         {/* service 1  */}
         <div className="hover-3d ">
           <div className="card bg-base-200 shadow-sm">
             <div className="card-body">
               <h2 className="card-title">Discover Ideas</h2>
-              <p className="text-gray-700 ">
+              <p className="text-gray-600  ">
                 Browse through a wide range of startup ideas shared by users
                 around the world. Explore trending concepts, filter by
                 categories, and find inspiration for your next big innovation.
@@ -42,7 +43,7 @@ const Methodology = () => {
           <div className="card bg-base-200 shadow-sm">
             <div className="card-body">
               <h2 className="card-title">Share Your Idea</h2>
-              <p className="text-gray-700 ">
+              <p className="text-gray-600  ">
                 Have an idea in mind? Post it on IdeaVault and let the community
                 see it. Describe your concept clearly and attract feedback from
                 like-minded innovators.
@@ -67,12 +68,12 @@ const Methodology = () => {
           <div></div>
           <div></div>
         </div>
-        {/* service 1  */}
+        {/* service 3  */}
         <div className="hover-3d ">
           <div className="card bg-base-200 shadow-sm">
             <div className="card-body">
               <h2 className="card-title">Engage & Validate</h2>
-              <p className="text-gray-700 text-justify ">
+              <p className="text-gray-600 text-justify ">
                 Get real feedback from the community through comments,
                 discussions, and suggestions. Improve your idea based on
                 insights and validate its potential before building it.
