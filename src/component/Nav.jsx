@@ -28,7 +28,7 @@ const Nav = () => {
   return (
     <div className="bg-base-100 shadow-sm">
       <div className="navbar container mx-auto ">
-        <div className="navbar-start">
+        <div className="navbar-start w-[10%] md:w-[50%]">
           <div className="dropdown lg:hidden ">
             <div
               tabIndex={0}
@@ -73,7 +73,7 @@ const Nav = () => {
           </Link>
         </div>
 
-        <div className="navbar-end">
+        <div className="navbar-end w-full md:w-[50%]">
           {/* <div className="space-x-2">
             <Link href={"/login"}>
               <Button
@@ -101,17 +101,21 @@ const Nav = () => {
                   <Person></Person> Profile
                 </Button>
               </Link> */}
-              <Button variant="outline" onClick={handleLogOut}>
+              <Button variant="outline" onClick={handleLogOut} className={'ml-2'}>
                 Logout
               </Button>
             </>
           ) : (
             <>
               <Link href="/login">
-                <Button variant="outline">Login</Button>
+                <Button variant="outline" className={"text-xs md:text-sm"}>
+                  Login
+                </Button>
               </Link>
               <Link href="/registration">
-                <Button variant="outline">Registration</Button>
+                <Button variant="outline" className={"text-xs md:text-sm ml-2 "}>
+                  Registration
+                </Button>
               </Link>
             </>
           )}
