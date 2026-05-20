@@ -10,7 +10,7 @@ export function CommentModal({ ideaDetails }) {
 
   const { data: session } = authClient.useSession();
 
-  console.log(session);
+  // console.log(session);
 
   const handleCommentSubmit = async (e) => {
     e.preventDefault();

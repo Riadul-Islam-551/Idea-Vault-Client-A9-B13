@@ -1,9 +1,18 @@
+import { auth } from "@/lib/auth";
+import { Button } from "@heroui/react";
 import { username } from "better-auth/plugins";
+import { headers } from "next/headers";
 import Image from "next/image";
 import React from "react";
 
-const CommentCard = ({ comment }) => {
-  console.log(comment);
+const CommentCard = async ({ comment }) => {
+  const session = await auth.api.getSession({
+    headers: await headers(), // you need to pass the headers object.
+  });
+
+  const commenter = session?.user?.id;
+  console.log(commenter);
+  // console.log(comment);
   const {
     _id,
     userName,
@@ -28,6 +37,20 @@ const CommentCard = ({ comment }) => {
           <p className="text-xs text-gray-600">{time}</p>
         </div>
         <p className="text-sm text-gray-600">{commentInput}</p>
+        <div>
+          {commenter === userId ? (
+            <div className="space-x-2 mt-2 ">
+              <Button variant="tertiary" className={"text-sm"}>
+                Edit
+              </Button>
+              <Button variant="tertiary" className={"text-red-500 text-sm"}>
+                Delete
+              </Button>
+            </div>
+          ) : (
+            <></>
+          )}
+        </div>
       </div>
     </div>
   );
