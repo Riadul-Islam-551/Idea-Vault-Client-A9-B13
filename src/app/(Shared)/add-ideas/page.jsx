@@ -40,7 +40,7 @@ const AddIdeaPage = () => {
       audience: ideaData.audience,
       price: ideaData.price,
       createdBy: session?.user?.id,
-    }; 
+    };
 
     console.log(idea);
 
@@ -57,7 +57,7 @@ const AddIdeaPage = () => {
     const data = await res.json();
     alert("Discover your idea successfully!!");
 
-    // redirect("/destinations");
+    redirect("/myIdeas");
     // console.log(data);
   };
 

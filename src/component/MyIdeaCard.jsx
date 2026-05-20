@@ -2,6 +2,7 @@ import { Pencil, TrashBin } from "@gravity-ui/icons";
 import { Button, Card, CloseButton } from "@heroui/react";
 import Image from "next/image";
 import React from "react";
+import { DeleteIdea } from "./DeleteIdea";
 
 const MyIdeaCard = ({ idea }) => {
   const {
@@ -18,6 +19,9 @@ const MyIdeaCard = ({ idea }) => {
     category,
     audience,
   } = idea;
+
+  
+
   return (
     <div>
       <Card className="w-full items-stretch md:flex-row bg-base-300">
@@ -46,9 +50,7 @@ const MyIdeaCard = ({ idea }) => {
               <Button className="w-full sm:w-auto bg-orange-500 rounded ">
                 <Pencil></Pencil> Edit
               </Button>
-              <Button variant="outline" className="w-full sm:w-auto rounded border-red-500 text-red-500">
-                <TrashBin></TrashBin>Delete
-              </Button>
+              <DeleteIdea idea={idea}></DeleteIdea>
             </div>
           </Card.Footer>
         </div>
