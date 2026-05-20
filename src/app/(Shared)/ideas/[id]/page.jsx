@@ -1,3 +1,4 @@
+import CommentSection from "@/component/comments/CommentSection";
 import { ArrowLeft, PinFill } from "@gravity-ui/icons";
 import { Button, Calendar } from "@heroui/react";
 import Image from "next/image";
@@ -32,14 +33,10 @@ const DetailedIdea = async ({ params }) => {
       {/* nav button  */}
       <div className="flex justify-between items-center mb-5 ">
         <div>
-          <Link href={"/destinations"} className="flex items-center gap-2">
+          <Link href={"/ideas"} className="flex items-center gap-2">
             <ArrowLeft></ArrowLeft> Back to Ideas
           </Link>
         </div>
-        {/* <div className="space-x-2">
-          <EditDestination detailsData={detailsData}></EditDestination>
-          <DeleteDestination detailsData={detailsData}></DeleteDestination>
-        </div> */}
       </div>
       {/* details section  */}
       <div className="text-gray-600">
@@ -92,16 +89,8 @@ const DetailedIdea = async ({ params }) => {
           </div>
         </div>
       </div>
-      {/* <div className="py-9 ">
-        <Link href={"/myBookings"}>
-          <Button
-            variant="outline"
-            className={"w-full text-cyan-500 border-cyan-500 rounded "}
-          >
-            Show Your Booking Destinations
-          </Button>
-        </Link>
-      </div> */}
+      {/* comments section  */}
+      <CommentSection ideaDetails={ideaDetails} ></CommentSection>
     </div>
   );
 };
