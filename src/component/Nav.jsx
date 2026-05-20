@@ -8,7 +8,7 @@ import { authClient } from "@/lib/auth-client";
 
 const Nav = () => {
   const { data: session } = authClient.useSession();
-  console.log(session);
+  // console.log(session);
   const user = session?.user;
 
   const handleLogOut = async () => {
@@ -19,7 +19,7 @@ const Nav = () => {
     <>
       <Navlinks href="/">Home</Navlinks>
       <Navlinks href="/ideas">Ideas</Navlinks>
-      <Navlinks href="/addIdeas">Add Idea</Navlinks>
+      <Navlinks href="/add-ideas">Add Idea</Navlinks>
       <Navlinks href="/myIdeas">My Ideas</Navlinks>
       <Navlinks href="/myInteractions">My Interactions</Navlinks>
     </>
