@@ -3,13 +3,12 @@
 
 import { Avatar, Button, Spinner } from "@heroui/react";
 import Link from "next/link";
-import Image from "next/image";
 import Navlinks from "./Navlinks";
 import { authClient } from "@/lib/auth-client";
-import { Person } from "@gravity-ui/icons";
 
 const Nav = () => {
   const { data: session } = authClient.useSession();
+  console.log(session);
   const user = session?.user;
 
   const handleLogOut = async () => {
@@ -101,7 +100,11 @@ const Nav = () => {
                   <Person></Person> Profile
                 </Button>
               </Link> */}
-              <Button variant="outline" onClick={handleLogOut} className={'ml-2'}>
+              <Button
+                variant="outline"
+                onClick={handleLogOut}
+                className={"ml-2"}
+              >
                 Logout
               </Button>
             </>
@@ -113,7 +116,10 @@ const Nav = () => {
                 </Button>
               </Link>
               <Link href="/registration">
-                <Button variant="outline" className={"text-xs md:text-sm ml-2 "}>
+                <Button
+                  variant="outline"
+                  className={"text-xs md:text-sm ml-2 "}
+                >
                   Registration
                 </Button>
               </Link>
