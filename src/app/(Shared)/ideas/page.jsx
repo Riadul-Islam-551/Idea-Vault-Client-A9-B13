@@ -1,4 +1,5 @@
 import IdeaCard from "@/component/IdeaCard";
+import IdeasContainer from "@/component/IdeasContainer";
 import React from "react";
 
 const IdeaPage = async () => {
@@ -14,11 +15,7 @@ const IdeaPage = async () => {
       <p className="text-center text-gray-600 mb-12">
         Choose your startup idea, explore it, interact with the idea
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-stretch ">
-        {ideaData.map((idea) => (
-          <IdeaCard key={idea._id} idea={idea}></IdeaCard>
-        ))}
-      </div>
+      <IdeasContainer ideas={ideaData}></IdeasContainer>
     </div>
   );
 };

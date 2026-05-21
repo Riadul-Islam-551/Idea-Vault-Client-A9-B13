@@ -1,18 +1,10 @@
-import { auth } from "@/lib/auth";
 import { ArrowUpRight, PinFill } from "@gravity-ui/icons";
 import { Button, Calendar } from "@heroui/react";
-import { headers } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const IdeaCard = async ({ idea }) => {
-  // const session = await auth.api.getSession({
-  //   headers: await headers(), // you need to pass the headers object.
-  // });
-  // const creator = session?.user?.name
-  // console.log(creator)
-
+const IdeaCard = ({ idea }) => {
   const {
     _id,
     title,
@@ -64,7 +56,6 @@ const IdeaCard = async ({ idea }) => {
             </div>
           </div>
         </div>
-        {/* 8 extra div need for 3D hover effect  */}
       </div>
     </div>
   );
