@@ -100,7 +100,7 @@ export function EditIdea({ idea }) {
                       isRequired
                       name="tag"
                       type="Text"
-                      className="w-full"
+                      className="w-full lg:w-[50%]"
                     >
                       <Label>Tag </Label>
                       <Input
@@ -110,39 +110,25 @@ export function EditIdea({ idea }) {
                       <FieldError />
                     </TextField>
                     {/* category */}
-                    <Select
-                      defaultValue={category}
-                      name="category"
-                      isRequired
-                      className="w-full "
-                      placeholder="Select category"
-                    >
-                      <Label>Category</Label>
-                      <Select.Trigger className="rounded-xl  bg-base-300 ">
-                        <Select.Value />
-                        <Select.Indicator />
-                      </Select.Trigger>
-                      <Select.Popover>
-                        <ListBox>
-                          <ListBox.Item id="Tech" textValue="Tech">
-                            Tech
-                            <ListBox.ItemIndicator />
-                          </ListBox.Item>
-                          <ListBox.Item id="Education" textValue="Education">
-                            Education
-                            <ListBox.ItemIndicator />
-                          </ListBox.Item>
-                          <ListBox.Item id="AI" textValue="AI">
-                            AI
-                            <ListBox.ItemIndicator />
-                          </ListBox.Item>
-                          <ListBox.Item id="Health" textValue="Health">
-                            Health
-                            <ListBox.ItemIndicator />
-                          </ListBox.Item>
-                        </ListBox>
-                      </Select.Popover>
-                    </Select>
+                    <fieldset className="fieldset w-full lg:w-1/2">
+                      <legend className="font-bold text-gray-500">
+                        Category
+                      </legend>
+                      <select
+                        defaultValue={category}
+                        name="category"
+                        isRequired
+                        className="select w-full h-9 flex justify-start items-center bg-base-300 border-none rounded-xl"
+                      >
+                        <option className="text-gray-600 " disabled={true}>
+                          Select Category
+                        </option>
+                        <option>Health</option>
+                        <option>Education</option>
+                        <option>AI</option>
+                        <option>Tech</option>
+                      </select>
+                    </fieldset>
                   </div>
                   <div className="flex flex-col lg:flex-row justify-around items-center gap-9">
                     {/* price  */}
