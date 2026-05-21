@@ -4,6 +4,7 @@ import { username } from "better-auth/plugins";
 import { headers } from "next/headers";
 import Image from "next/image";
 import React from "react";
+import EditComment from "./EditComment";
 
 const CommentCard = async ({ comment }) => {
   const session = await auth.api.getSession({
@@ -11,7 +12,7 @@ const CommentCard = async ({ comment }) => {
   });
 
   const commenter = session?.user?.id;
-  console.log(commenter);
+  // console.log(commenter);
   // console.log(comment);
   const {
     _id,
@@ -40,9 +41,7 @@ const CommentCard = async ({ comment }) => {
         <div>
           {commenter === userId ? (
             <div className="space-x-2 mt-2 ">
-              <Button variant="tertiary" className={"text-sm"}>
-                Edit
-              </Button>
+              <EditComment comment={comment} />
               <Button variant="tertiary" className={"text-red-500 text-sm"}>
                 Delete
               </Button>
