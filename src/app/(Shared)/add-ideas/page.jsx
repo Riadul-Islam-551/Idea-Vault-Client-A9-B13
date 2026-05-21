@@ -15,6 +15,7 @@ import {
   Select,
 } from "@heroui/react";
 import { redirect } from "next/navigation";
+import toast from "react-hot-toast";
 
 const AddIdeaPage = () => {
   const { data: session } = authClient.useSession();
@@ -55,7 +56,7 @@ const AddIdeaPage = () => {
     });
 
     const data = await res.json();
-    alert("Discover your idea successfully!!");
+    toast.success('Discover your idea successfully !')
 
     redirect("/myIdeas");
     // console.log(data);
@@ -104,7 +105,7 @@ const AddIdeaPage = () => {
               isRequired
               className="select w-full h-9 flex justify-start items-center bg-base-300 border-none rounded-xl"
             >
-              <option className="text-gray-600 "  disabled={true}>
+              <option className="text-gray-600 " disabled={true}>
                 Select Category
               </option>
               <option>Health</option>

@@ -1,6 +1,7 @@
 "use client";
 
 import { AlertDialog, Button } from "@heroui/react";
+import toast from "react-hot-toast";
 
 export function DeleteComment({ comment }) {
   const { _id } = comment;
@@ -17,7 +18,7 @@ export function DeleteComment({ comment }) {
     console.log(data);
 
     if (data.deletedCount > 0) {
-      alert("Delete Successfully");
+      toast.success("Delete Successfully");
       window.location.reload();
     }
   };

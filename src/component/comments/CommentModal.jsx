@@ -3,6 +3,7 @@
 import { authClient } from "@/lib/auth-client";
 import { Envelope } from "@gravity-ui/icons";
 import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
+import toast from "react-hot-toast";
 
 export function CommentModal({ ideaDetails }) {
   const ideaId = ideaDetails._id;
@@ -41,7 +42,7 @@ export function CommentModal({ ideaDetails }) {
     });
     const data = await res.json();
     if (data.insertedId) {
-      alert("Thanks for your feedback");
+      toast.success("Thanks for your feedback !");
       window.location.reload();
     }
     // console.log(data);

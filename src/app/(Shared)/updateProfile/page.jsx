@@ -12,12 +12,13 @@ import {
 } from "@heroui/react";
 import Image from "next/image";
 import React from "react";
+import toast from "react-hot-toast";
 
 const UpdateProfile = () => {
   const { data: session } = authClient.useSession();
   // console.log(session);
   const user = session?.user;
-//   console.log(user);
+  //   console.log(user);
 
   const handleUpdateSubmit = async (e) => {
     e.preventDefault();
@@ -31,10 +32,10 @@ const UpdateProfile = () => {
     });
 
     if (error) {
-      alert("something went wrong");
+      toast.error("something went wrong");
     }
     if (data) {
-      alert("success");
+      toast.success("success");
       window.location.reload();
     }
   };
@@ -45,9 +46,15 @@ const UpdateProfile = () => {
         Profile
       </h1>
       <div className="w-25 h-25 rounded-full mx-auto ">
-        <Image src={user?.image} alt="user?.name" width={600} height={600} classname={'w-full h-full '}></Image>
+        <Image
+          src={user?.image}
+          alt="user?.name"
+          width={600}
+          height={600}
+          classname={"w-full h-full "}
+        ></Image>
       </div>
-      
+
       <div className="max-w-100 mx-auto mt-12">
         <Form className="flex flex-col gap-4" onSubmit={handleUpdateSubmit}>
           {/* name */}

@@ -2,6 +2,7 @@
 import React from "react";
 import { Envelope } from "@gravity-ui/icons";
 import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
+import toast from "react-hot-toast";
 
 const EditComment = ({ comment }) => {
   //   console.log(comment);
@@ -35,7 +36,7 @@ const EditComment = ({ comment }) => {
     // console.log(data);
 
     if (data.modifiedCount > 0) {
-      alert("Your feedback has been updated");
+      toast.success("Your feedback has been updated");
       window.location.reload();
     }
   };

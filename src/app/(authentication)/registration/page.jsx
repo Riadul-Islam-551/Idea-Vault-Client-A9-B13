@@ -13,6 +13,7 @@ import {
 import { redirect } from "next/navigation";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import toast from "react-hot-toast";
 
 const SignupPage = () => {
   const handleSubmit = async (e) => {
@@ -28,11 +29,11 @@ const SignupPage = () => {
     });
 
     if (data) {
-      redirect("/");
+      toast.success('Created account successfully !')
     }
 
     if (error) {
-      alert("something went wrong");
+      toast.error('Something went wrong !')
     }
 
     // console.log({ data, error });

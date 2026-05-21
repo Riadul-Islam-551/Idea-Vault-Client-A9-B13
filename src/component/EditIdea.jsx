@@ -15,6 +15,7 @@ import {
   TextArea,
   Description,
 } from "@heroui/react";
+import toast from "react-hot-toast";
 
 export function EditIdea({ idea }) {
   const {
@@ -48,7 +49,7 @@ export function EditIdea({ idea }) {
 
     const data = await res.json();
     console.log(data);
-    alert("Discover your idea successfully!!");
+    toast.success("Edited your idea successfully!!");
     if (data.modifiedCount > 0) {
       window.location.reload();
     }
