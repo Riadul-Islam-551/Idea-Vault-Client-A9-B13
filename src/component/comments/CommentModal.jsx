@@ -7,6 +7,7 @@ import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
 export function CommentModal({ ideaDetails }) {
   const ideaId = ideaDetails._id;
   const ideaTitle = ideaDetails.title;
+  const ideaImage = ideaDetails.imageUrl;
   //   console.log(ideaId);
 
   const { data: session } = authClient.useSession();
@@ -20,6 +21,7 @@ export function CommentModal({ ideaDetails }) {
     // const comment = commentInput.comment;
 
     const commentData = {
+      ideaImage,
       ideaTitle,
       idea: ideaId,
       userId: session?.user?.id,

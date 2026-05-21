@@ -128,6 +128,7 @@ const SignupPage = () => {
           <Icon icon="devicon:google" />
           Sign in with Google
         </Button>
+        <p className="text-xs mt-2 text-gray-600 ">Forget Password ?</p>
         <p className="mt-3 text-center text-xs ">
           Have any account?
           <Link href={"/login"} className=" text-orange-500">

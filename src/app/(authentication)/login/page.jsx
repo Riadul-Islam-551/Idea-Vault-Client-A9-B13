@@ -10,6 +10,7 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
@@ -93,6 +94,18 @@ const LoginPage = () => {
             </Button>
           </div>
         </Form>
+        <div className="text-center text-sm text-gray-600 my-3 ">
+          or sign in with
+        </div>
+        <Button
+          // onClick={handleGoogleSignin}
+          className="w-full rounded "
+          variant="tertiary"
+        >
+          <Icon icon="devicon:google" />
+          Sign in with Google
+        </Button>
+        <p className="text-xs mt-2 text-gray-600 ">Forget Password ?</p>
         <p className="mt-3 text-center text-xs ">
           don&apos;t Have any account?
           <Link href={"/registration"} className=" text-orange-500">
