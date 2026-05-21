@@ -8,9 +8,8 @@ import { authClient } from "@/lib/auth-client";
 import { ViewProfile } from "./ViewProfile";
 
 const Nav = () => {
-  
   const { data: session } = authClient.useSession();
-  // console.log(session);
+  console.log("session:", session);
   const user = session?.user;
 
   const handleLogOut = async () => {
@@ -75,7 +74,11 @@ const Nav = () => {
         </div>
 
         <div className="navbar-end w-full md:w-[50%]">
-          {user ? (
+          {session === null  ? (
+            <div className="navbar-end w-full md:w-[50%] flex justify-end">
+              <Spinner></Spinner>
+            </div>
+          ) : user ? (
             <>
               <ViewProfile></ViewProfile>
               <Button
