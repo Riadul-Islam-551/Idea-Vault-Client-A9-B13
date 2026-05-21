@@ -5,6 +5,7 @@ import { headers } from "next/headers";
 import Image from "next/image";
 import React from "react";
 import EditComment from "./EditComment";
+import { DeleteComment } from "./DeleteComment";
 
 const CommentCard = async ({ comment }) => {
   const session = await auth.api.getSession({
@@ -42,9 +43,7 @@ const CommentCard = async ({ comment }) => {
           {commenter === userId ? (
             <div className="space-x-2 mt-2 ">
               <EditComment comment={comment} />
-              <Button variant="tertiary" className={"text-red-500 text-sm"}>
-                Delete
-              </Button>
+              <DeleteComment comment={comment}></DeleteComment>
             </div>
           ) : (
             <></>
