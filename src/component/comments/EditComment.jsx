@@ -11,7 +11,7 @@ const EditComment = ({ comment }) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const commentInput = Object.fromEntries(formData.entries());
-    console.log(commentInput.comment);
+    // console.log(commentInput.comment);
     const commentData = {
       comment: commentInput.comment,
       userName,
@@ -21,7 +21,7 @@ const EditComment = ({ comment }) => {
       idea,
     };
     console.log("comment", commentData);
-    console.log(_id);
+    // console.log(_id);
 
     const res = await fetch(`http://localhost:5000/comments/${_id}`, {
       method: "PATCH",
@@ -30,12 +30,14 @@ const EditComment = ({ comment }) => {
       },
       body: JSON.stringify(commentData),
     });
+
     const data = await res.json();
-    console.log(data);
-    // if (data.modifiedCount > 0) {
-    //   alert("Your feedback has been updated");
-    //   window.location.reload();
-    // }
+    // console.log(data);
+
+    if (data.modifiedCount > 0) {
+      alert("Your feedback has been updated");
+      window.location.reload();
+    }
   };
 
   return (
