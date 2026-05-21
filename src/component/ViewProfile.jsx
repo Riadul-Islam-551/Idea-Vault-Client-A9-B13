@@ -33,8 +33,8 @@ export function ViewProfile() {
               ></Image>
             </div>
             <div className="mt-3 text-center">
-              <h1 className="text-lg font-bold">{user?.name}</h1>
-              <p className="text-gray-600">{user?.email}</p>
+              <h1 className="text-sm font-bold">{user?.name}</h1>
+              <p className="text-gray-600 text-sm">{user?.email}</p>
             </div>
             <div>
               <Link href={"/updateProfile"}>

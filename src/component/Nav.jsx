@@ -75,22 +75,6 @@ const Nav = () => {
         </div>
 
         <div className="navbar-end w-full md:w-[50%]">
-          {/* <div className="space-x-2">
-            <Link href={"/login"}>
-              <Button
-                variant="outline"
-                className={"border-orange-500 text-orange-500"}
-              >
-                Login
-              </Button>
-            </Link>
-            <Link href={"/registration"}>
-              <Button className={"bg-orange-500 text-white"}>
-                Registration
-              </Button>
-            </Link>
-          </div> */}
-
           {user ? (
             <>
               <ViewProfile></ViewProfile>
