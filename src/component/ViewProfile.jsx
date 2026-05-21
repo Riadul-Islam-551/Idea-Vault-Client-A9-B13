@@ -22,7 +22,7 @@ export function ViewProfile() {
 
       {showProfile && (
         <div className="absolute -right-20 top-14 z-50">
-          <div className="w-65 h-65 rounded-2xl bg-white flex flex-col justify-center items-center gap-3 p-2">
+          <div className="profile w-65 h-65 rounded-2xl bg-white/30 backdrop-blur-xl border border-white/20 shadow-2xl flex flex-col justify-center items-center gap-3 p-4">
             <div className="w-20 h-20 ">
               <Image
                 src={user?.image}
@@ -34,11 +34,14 @@ export function ViewProfile() {
             </div>
             <div className="mt-3 text-center">
               <h1 className="text-sm font-bold">{user?.name}</h1>
-              <p className="text-gray-600 text-sm">{user?.email}</p>
+              <p className="text-gray-800 text-sm">{user?.email}</p>
             </div>
             <div>
               <Link href={"/updateProfile"}>
-                <Button variant="outline" className={"border-orange-500 rounded"}>
+                <Button
+                  variant="outline"
+                  className={"border-orange-500 rounded"}
+                >
                   Update Profile
                 </Button>
               </Link>
