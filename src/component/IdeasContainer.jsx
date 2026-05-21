@@ -111,35 +111,38 @@ const IdeasContainer = ({ ideas }) => {
   console.log("idea", ideas);
   return (
     <div>
-      {/* Search Input */}
-      <div>
-        <Input
-          aria-label="Search"
-          className="w-full bg-base-300 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent mb-6"
-          placeholder="Search ideas..."
-          value={searchIdea}
-          onChange={(e) => setSearchIdea(e.target.value)}
-        />
-      </div>
+      <div className="flex justify-center items-center gap-4 ">
+        {/* Search Input */}
+        <div className="w-full">
+          <p className="mb-1">Search by Title</p>
+          <Input
+            aria-label="Search"
+            className="w-full bg-base-300 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent mb-6"
+            placeholder="Search ideas..."
+            value={searchIdea}
+            onChange={(e) => setSearchIdea(e.target.value)}
+          />
+        </div>
 
-      {/* Category Select */}
-      <p>Category</p>
-      <div className="mb-6">
-        <select
-          value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
-          className="select w-full"
-        >
-          {categories.map((category) => (
-            <option key={category} value={category}>
-              {category}
-            </option>
-          ))}
-        </select>
+        {/* Category Select */}
+        <div className="w-full ">
+          <p className="mb-1">Search by Category</p>
+          <select
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
+            className="select w-full bg-base-300 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent mb-6"
+          >
+            {categories.map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       {/* Ideas Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-stretch">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-stretch mb-12 ">
         {filteredIdeas.length > 0 ? (
           filteredIdeas.map((idea) => <IdeaCard key={idea._id} idea={idea} />)
         ) : (
