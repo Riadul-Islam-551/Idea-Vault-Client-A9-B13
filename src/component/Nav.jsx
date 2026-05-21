@@ -74,11 +74,12 @@ const Nav = () => {
         </div>
 
         <div className="navbar-end w-full md:w-[50%]">
-          {session === null  ? (
+          {/* {session === null  ? (
             <div className="navbar-end w-full md:w-[50%] flex justify-end">
               <Spinner></Spinner>
             </div>
-          ) : user ? (
+          ) :  */}
+          { user ? (
             <>
               <ViewProfile></ViewProfile>
               <Button

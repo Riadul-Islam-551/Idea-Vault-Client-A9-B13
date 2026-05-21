@@ -3,6 +3,7 @@ import "./globals.css";
 import Nav from "@/component/Nav";
 import Footer from "@/component/Footer";
 import { Toast } from "@heroui/react";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Toaster position="top-center" reverseOrder={false}></Toaster>
         <Nav></Nav>
         {children}
         <Footer></Footer>

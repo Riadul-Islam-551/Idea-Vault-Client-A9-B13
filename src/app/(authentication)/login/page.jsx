@@ -13,6 +13,7 @@ import {
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import toast from "react-hot-toast";
 
 const LoginPage = () => {
   const handleSubmit = async (e) => {
@@ -26,11 +27,12 @@ const LoginPage = () => {
     });
 
     if (data) {
+      toast.success("Login successfully !");
       redirect("/");
     }
 
     if (error) {
-      alert("something went wrong");
+      toast.error("Something went wrong !");
     }
 
     // console.log({ data, error });
