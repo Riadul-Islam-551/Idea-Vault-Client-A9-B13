@@ -33,7 +33,7 @@ const MyIdeasPage = async () => {
         </>
       ) : (
         <>
-          <Card className="min-h-100  w-full flex items-center justify-center bg-base-200 ">
+          <Card className="min-h-100  w-full flex items-center justify-center bg-base-200 mb-12">
             <h1>You do not generate any idea yet.</h1>
             <Link href={"/add-ideas"}>
               <Button

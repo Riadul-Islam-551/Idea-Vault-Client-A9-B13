@@ -1,7 +1,9 @@
 import MyInteractionCommentCard from "@/component/comments/MyInteractionCommentCard";
 import { auth } from "@/lib/auth";
-import { Card } from "@heroui/react";
+import { ArrowLeft } from "@gravity-ui/icons";
+import { Button, Card } from "@heroui/react";
 import { headers } from "next/headers";
+import Link from "next/link";
 import React from "react";
 
 const MyInteractionsPage = async () => {
@@ -25,10 +27,35 @@ const MyInteractionsPage = async () => {
       <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-bold mb-7 ">
         My Interactions !!
       </h1>
-      <div className="grid grid-cols-1 gap-7">
-        {myComment.map((commentData) => (
-          <MyInteractionCommentCard key={commentData._id} commentData={commentData}> </MyInteractionCommentCard>
-        ))}
+      <div>
+        {myComment.length > 0 ? (
+          <div className="grid grid-cols-1 gap-7 min-h-[70vh] ">
+            {myComment.map((commentData) => (
+              <MyInteractionCommentCard
+                key={commentData._id}
+                commentData={commentData}
+              >
+                {" "}
+              </MyInteractionCommentCard>
+            ))}
+          </div>
+        ) : (
+          <div className="min-h-100 flex justify-center items-center flex-col border border-gray-300 rounded-2xl px-4">
+            <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-4 ">
+              You don&apos;t make any Interactions{" "}
+            </h1>
+            <Link href={"/ideas"}>
+              <Button
+                variant="outline"
+                className={
+                  "text-orange-500 border-orange-500 rounded space-x-1"
+                }
+              >
+                <ArrowLeft></ArrowLeft>Explore Idea
+              </Button>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
