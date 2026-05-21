@@ -10,6 +10,7 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import Image from "next/image";
 import React from "react";
 
 const UpdateProfile = () => {
@@ -39,10 +40,14 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto min-h-[70vh] ">
       <h1 className="mt-12  text-2xl md:text-3xl lg:text-4xl font-bold text-center">
         Profile
       </h1>
+      <div className="w-25 h-25 rounded-full mx-auto ">
+        <Image src={user?.image} alt="user?.name" width={600} height={600} classname={'w-full h-full '}></Image>
+      </div>
+      
       <div className="max-w-100 mx-auto mt-12">
         <Form className="flex flex-col gap-4" onSubmit={handleUpdateSubmit}>
           {/* name */}
