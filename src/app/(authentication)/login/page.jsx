@@ -38,6 +38,12 @@ const LoginPage = () => {
     // console.log(user);
   };
 
+  const handleGoogleSign = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
+  };
+
   return (
     <div className="py-9 px-2 min-h-[70vh]">
       <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl text-center mb-12">
@@ -98,7 +104,7 @@ const LoginPage = () => {
           or sign in with
         </div>
         <Button
-          // onClick={handleGoogleSignin}
+          onClick={handleGoogleSign}
           className="w-full rounded "
           variant="tertiary"
         >
