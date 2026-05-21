@@ -5,8 +5,10 @@ import { Avatar, Button, Spinner } from "@heroui/react";
 import Link from "next/link";
 import Navlinks from "./Navlinks";
 import { authClient } from "@/lib/auth-client";
+import { ViewProfile } from "./ViewProfile";
 
 const Nav = () => {
+  
   const { data: session } = authClient.useSession();
   // console.log(session);
   const user = session?.user;
@@ -91,15 +93,7 @@ const Nav = () => {
 
           {user ? (
             <>
-              <Avatar>
-                <Avatar.Image alt="John Doe" src={user?.image} />
-                <Avatar.Fallback>JD</Avatar.Fallback>
-              </Avatar>
-              {/* <Link href="/profile" className="hidden lg:block ">
-                <Button variant="ghost">
-                  <Person></Person> Profile
-                </Button>
-              </Link> */}
+              <ViewProfile></ViewProfile>
               <Button
                 variant="outline"
                 onClick={handleLogOut}
