@@ -1,3 +1,4 @@
+import { LogoFacebook, LogoLinkedin } from "@gravity-ui/icons";
 import Link from "next/link";
 import React from "react";
 
@@ -16,7 +17,7 @@ const Footer = () => {
             </p>
           </aside>
         </footer>
-        <footer className="footer grid-cols-1 lg:grid-cols-3 sm:footer-horizonta p-10">
+        <footer className="footer grid-cols-1 lg:grid-cols-4 sm:footer-horizonta p-10">
           <nav className="col-span-1">
             <h6 className="font-bold text-lg">Quick Links</h6>
             <Link href="/">Home</Link>
@@ -45,6 +46,13 @@ const Footer = () => {
             <a href="#" className="text-xs">
               info@wandarland.com
             </a>
+          </nav>
+          <nav className="col-span-1">
+            <h6 className="font-bold text-lg">Social connections</h6>
+            <div className="flex items-center gap-4 ">
+              <LogoFacebook></LogoFacebook>
+            <LogoLinkedin></LogoLinkedin>
+            </div>
           </nav>
         </footer>
         <p className="text-center text-[10px] ">
