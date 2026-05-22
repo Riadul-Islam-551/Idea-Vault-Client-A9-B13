@@ -2,7 +2,7 @@ import React from "react";
 import IdeaCard from "./IdeaCard";
 
 const TrendingIdea = async () => {
-  const res = await fetch("http://localhost:5000/ideas?limit=3");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/ideas?limit=3`);
   const ideaData = await res.json();
   return (
     <div className="container mx-auto px-4">

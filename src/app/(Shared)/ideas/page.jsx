@@ -3,7 +3,7 @@ import IdeasContainer from "@/component/IdeasContainer";
 import React from "react";
 
 const IdeaPage = async () => {
-  const res = await fetch("http://localhost:5000/ideas");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/ideas`);
   const ideaData = await res.json();
 
   console.log(ideaData);

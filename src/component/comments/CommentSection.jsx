@@ -15,7 +15,7 @@ const CommentSection = async ({ ideaDetails }) => {
   });
   console.log(token);
 
-  const res = await fetch(`http://localhost:5000/comments/${ideaId}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/comments/${ideaId}`, {
     headers: {
       authorization: `Bearer ${token}`,
     },
