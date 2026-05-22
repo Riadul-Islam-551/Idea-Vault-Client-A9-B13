@@ -6,7 +6,7 @@ const IdeaPage = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/ideas`);
   const ideaData = await res.json();
 
-  console.log(ideaData);
+  // console.log(ideaData);
   return (
     <div className="container mx-auto px-4">
       <h1 className="text-2xl md:text-3xl lg:text-4xl text-center mt-12 mb-4">

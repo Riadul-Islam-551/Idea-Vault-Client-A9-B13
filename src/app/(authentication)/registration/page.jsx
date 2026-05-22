@@ -29,11 +29,12 @@ const SignupPage = () => {
     });
 
     if (data) {
-      toast.success('Created account successfully !')
+      toast.success("Created account successfully !");
+      redirect("/");
     }
 
     if (error) {
-      toast.error('Something went wrong !')
+      toast.error("Something went wrong !");
     }
 
     // console.log({ data, error });
@@ -66,13 +67,23 @@ const SignupPage = () => {
           {/* name */}
           <TextField isRequired name="name" type="text">
             <Label>Name</Label>
-            <Input placeholder="Enter your name" className={"w-full bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"} />
+            <Input
+              placeholder="Enter your name"
+              className={
+                "w-full bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              }
+            />
             <FieldError />
           </TextField>
           {/* image url  */}
           <TextField isRequired name="image" type="text">
             <Label>Image URL</Label>
-            <Input placeholder="Image url" className={"w-full bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"} />
+            <Input
+              placeholder="Image url"
+              className={
+                "w-full bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              }
+            />
             <FieldError />
           </TextField>
           {/* email */}
@@ -88,7 +99,12 @@ const SignupPage = () => {
             }}
           >
             <Label>Email</Label>
-            <Input placeholder="john@example.com" className={"w-full bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"} />
+            <Input
+              placeholder="john@example.com"
+              className={
+                "w-full bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              }
+            />
             <FieldError />
           </TextField>
           {/* password  */}
@@ -111,7 +127,12 @@ const SignupPage = () => {
             }}
           >
             <Label>Password</Label>
-            <Input placeholder="Enter your password" className={"w-full bg-gray-100 dark:bg-[#212121]  focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent "} />
+            <Input
+              placeholder="Enter your password"
+              className={
+                "w-full bg-gray-100 dark:bg-[#212121]  focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent "
+              }
+            />
             <Description>
               Must be at least 8 characters with 1 uppercase and 1 number
             </Description>

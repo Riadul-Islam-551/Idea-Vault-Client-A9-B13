@@ -107,8 +107,8 @@ const IdeasContainer = ({ ideas }) => {
     return matchesSearch && matchesCategory;
   });
 
-  console.log("selectedCategory", selectedCategory);
-  console.log("idea", ideas);
+  // console.log("selectedCategory", selectedCategory);
+  // console.log("idea", ideas);
   return (
     <div>
       <div className="flex justify-center items-center gap-4 ">

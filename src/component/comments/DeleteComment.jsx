@@ -6,13 +6,13 @@ import toast from "react-hot-toast";
 
 export function DeleteComment({ comment }) {
   const { _id } = comment;
-  console.log(_id);
+  // console.log(_id);
 
   const handleDeleteComment = async () => {
     
     //token for client component
     const { data: tokenData } = await authClient.token();
-    console.log(tokenData);
+    // console.log(tokenData);
 
     const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/comments/${_id}`, {
       method: "DELETE",
@@ -22,7 +22,7 @@ export function DeleteComment({ comment }) {
       },
     });
     const data = await res.json();
-    console.log(data);
+    // console.log(data);
 
     if (data.deletedCount > 0) {
       toast.success("Delete Successfully");

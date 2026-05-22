@@ -10,7 +10,7 @@ import NavTheme from "./NavTheme";
 
 const Nav = () => {
   const { data: session } = authClient.useSession();
-  console.log("session:", session);
+  // console.log("session:", session);
   const user = session?.user;
 
   const handleLogOut = async () => {

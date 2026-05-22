@@ -42,7 +42,7 @@ export function EditIdea({ idea }) {
 
     //token for client component
     const { data: tokenData } = await authClient.token();
-    console.log(tokenData);
+    // console.log(tokenData);
 
     const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/ideas/${_id}`, {
       method: "PATCH",
@@ -54,7 +54,7 @@ export function EditIdea({ idea }) {
     });
 
     const data = await res.json();
-    console.log(data);
+    // console.log(data);
     toast.success("Edited your idea successfully!!");
     if (data.modifiedCount > 0) {
       window.location.reload();
