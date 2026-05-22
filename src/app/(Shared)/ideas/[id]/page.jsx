@@ -8,7 +8,11 @@ import React from "react";
 const DetailedIdea = async ({ params }) => {
   const { id } = await params;
   //   console.log("id", id);
-  const res = await fetch(`http://localhost:5000/ideas/details/${id}`);
+  const res = await fetch(`http://localhost:5000/ideas/details/${id}`, {
+    headers: {
+      authorization: "logged in",
+    },
+  });
   const ideaDetails = await res.json();
 
   //   console.log(ideaDetails);
@@ -90,7 +94,7 @@ const DetailedIdea = async ({ params }) => {
         </div>
       </div>
       {/* comments section  */}
-      <CommentSection ideaDetails={ideaDetails} ></CommentSection>
+      <CommentSection ideaDetails={ideaDetails}></CommentSection>
     </div>
   );
 };
