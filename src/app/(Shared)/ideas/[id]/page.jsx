@@ -52,7 +52,7 @@ const DetailedIdea = async ({ params }) => {
         </div>
       </div>
       {/* details section  */}
-      <div className="text-gray-600">
+      <div className="text-gray-600 dark:text-[#b5b5b5]">
         <div className="flex flex-col lg:flex-row  items-start justify-center gap-7">
           <div className="w-full lg:w-[50%]  h-50 md:h-75 lg:h-100   overflow-hidden rounded-xl ">
             <Image
@@ -65,13 +65,13 @@ const DetailedIdea = async ({ params }) => {
           </div>
           <div className="w-full  lg:w-[50%] flex flex-col lg:flex-row justify-between items-start gap-7  py-3 ">
             <div>
-              <h2 className="card-title font-bold text-lg md:text-xl">
+              <h2 className="card-title  font-bold text-lg md:text-xl">
                 {title}
               </h2>
 
               <h1 className="mt-2 text-sm ">{shortDescription}</h1>
 
-              <p className="my-3 text-sm text-orange-500 bg-base-300 inline-block py-1 px-6 rounded-full  ">
+              <p className="my-3 text-sm text-orange-500 bg-gray-200  inline-block py-1 px-6 rounded-full  ">
                 {category}
               </p>
               <p className="my-3 ">

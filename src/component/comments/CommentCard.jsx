@@ -25,7 +25,7 @@ const CommentCard = async ({ comment }) => {
     comment: commentInput,
   } = comment;
   return (
-    <div className="flex justify-start items-start gap-3 bg-base-100 rounded-xl p-2 ">
+    <div className="flex justify-start items-start gap-3 bg-[#d6d6d6] dark:bg-[#2b2b2b] rounded-xl p-2 ">
       <Image
         src={image}
         alt={userName}
@@ -36,9 +36,9 @@ const CommentCard = async ({ comment }) => {
       <div>
         <div className="flex justify-start items-end gap-3">
           <h1 className="font-semibold">{userName}</h1>
-          <p className="text-xs text-gray-600">{time}</p>
+          <p className="text-xs text-gray-600 dark:text-[#b5b5b5]">{time}</p>
         </div>
-        <p className="text-sm text-gray-600">{commentInput}</p>
+        <p className="text-sm text-gray-600 dark:text-[#b5b5b5]">{commentInput}</p>
         <div>
           {commenter === userId ? (
             <div className="space-x-2 mt-2 ">

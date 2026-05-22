@@ -72,7 +72,7 @@ const AddIdeaPage = () => {
         Discover Your Idea
       </h1>
       <Form
-        className="flex container mx-auto p-7 flex-col gap-4 border border-gray-200 rounded-2xl my-12 shadow"
+        className="flex container mx-auto p-7 flex-col gap-4 border border-gray-300 dark:border-gray-700 rounded-2xl my-12 shadow"
         onSubmit={onSubmit}
       >
         <div>
@@ -81,7 +81,7 @@ const AddIdeaPage = () => {
             <Label>Title</Label>
             <Input
               placeholder="AI-Powered Study Assistant"
-              className="w-full  border-none shadow-none bg-base-300"
+              className="w-full  border-none shadow-none bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
             />
             <FieldError />
           </TextField>
@@ -97,7 +97,7 @@ const AddIdeaPage = () => {
             <Label>Tag </Label>
             <Input
               placeholder="tag"
-              className="w-full border-none shadow-none bg-base-300"
+              className="w-full border-none shadow-none bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
             />
             <FieldError />
           </TextField>
@@ -107,7 +107,7 @@ const AddIdeaPage = () => {
             <select
               name="category"
               isRequired
-              className="select w-full h-9 flex justify-start items-center bg-base-300 border-none rounded-xl"
+              className="select w-full h-9 flex justify-start items-center bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent border-none rounded-xl"
             >
               <option className="text-gray-600 " disabled={true}>
                 Select Category
@@ -125,7 +125,7 @@ const AddIdeaPage = () => {
             <Label>Estimate Budget </Label>
             <Input
               placeholder="e.g., $1200"
-              className="w-full border-none shadow-none bg-base-300"
+              className="w-full border-none shadow-none bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
             />
             <FieldError />
           </TextField>
@@ -134,7 +134,7 @@ const AddIdeaPage = () => {
             <Label>Targeted Audience</Label>
             <Input
               placeholder="Teenagers"
-              className="w-full border-none shadow-none bg-base-300"
+              className="w-full border-none shadow-none bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
             />
             <FieldError />
           </TextField>
@@ -145,7 +145,7 @@ const AddIdeaPage = () => {
             <Label>Image Url</Label>
             <Input
               placeholder="https://example.com/image.jpg"
-              className="w-full border-none shadow-none bg-base-300"
+              className="w-full border-none shadow-none bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
             />
             <FieldError />
           </TextField>
@@ -156,7 +156,7 @@ const AddIdeaPage = () => {
             <Label>Short Description</Label>
             <Input
               placeholder=""
-              className="w-full border-none shadow-none bg-base-300"
+              className="w-full border-none shadow-none bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
             />
             <FieldError />
           </TextField>
@@ -168,7 +168,7 @@ const AddIdeaPage = () => {
             <TextArea
               placeholder=""
               rows={4}
-              className="border-none shadow-none bg-base-300"
+              className="border-none shadow-none bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
             />
             <Description>Maximum 1000 characters</Description>
           </TextField>
@@ -180,7 +180,7 @@ const AddIdeaPage = () => {
             <TextArea
               placeholder=""
               rows={4}
-              className="border-none shadow-none bg-base-300"
+              className="border-none shadow-none bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
             />
             <Description>Maximum 1000 characters</Description>
           </TextField>
@@ -192,7 +192,7 @@ const AddIdeaPage = () => {
             <TextArea
               placeholder=""
               rows={4}
-              className="border-none shadow-none bg-base-300"
+              className="border-none shadow-none bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
             />
             <Description>Maximum 1000 characters</Description>
           </TextField>

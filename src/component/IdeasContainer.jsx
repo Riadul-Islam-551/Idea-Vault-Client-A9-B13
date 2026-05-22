@@ -117,7 +117,7 @@ const IdeasContainer = ({ ideas }) => {
           <p className="mb-1">Search by Title</p>
           <Input
             aria-label="Search"
-            className="w-full bg-base-300 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent mb-6"
+            className="w-full bg-gray-100 dark:bg-[#212121] border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent mb-6"
             placeholder="Search ideas..."
             value={searchIdea}
             onChange={(e) => setSearchIdea(e.target.value)}
@@ -130,7 +130,7 @@ const IdeasContainer = ({ ideas }) => {
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="select w-full bg-base-300 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent mb-6"
+            className="select w-full bg-gray-100 dark:bg-[#212121] border border-gray-300 dark:border-gray-700 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent mb-6"
           >
             {categories.map((category) => (
               <option key={category} value={category}>

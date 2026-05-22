@@ -25,7 +25,7 @@ const MyIdeaCard = ({ idea }) => {
 
   return (
     <div>
-      <Card className="w-full items-stretch md:flex-row bg-base-300">
+      <Card className="w-full items-stretch md:flex-row bg-gray-100 dark:bg-[#212121]">
         <div className="relative h-35 shrink-0 overflow-hidden rounded-2xl sm:h-30 sm:30  ">
           <Image
             src={imageUrl}

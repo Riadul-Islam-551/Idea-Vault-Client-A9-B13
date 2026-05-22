@@ -12,7 +12,7 @@ const IdeaPage = async () => {
       <h1 className="text-2xl md:text-3xl lg:text-4xl text-center mt-12 mb-4">
         Explore Ideas
       </h1>
-      <p className="text-center text-gray-600 mb-12">
+      <p className="text-center text-gray-600 dark:text-[#b5b5b5] mb-12">
         Choose your startup idea, explore it, interact with the idea
       </p>
       <IdeasContainer ideas={ideaData}></IdeasContainer>

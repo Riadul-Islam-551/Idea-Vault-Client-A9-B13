@@ -24,7 +24,7 @@ const CommentSection = async ({ ideaDetails }) => {
   //   console.log(comments);
 
   return (
-    <div className="w-full p-3 rounded-xl bg-base-200 border border-gray-300 mt-9 ">
+    <div className="w-full p-3 rounded-xl bg-gray-100 dark:bg-[#212121]     border border-gray-300 dark:border-gray-700 mt-9 ">
       <h1 className="text-lg font-bold ">Give your feedback</h1>
       {/* comment body  */}
       <div className="comment-body min-h-10 grid grid-cols-1 gap-4 my-4 ">

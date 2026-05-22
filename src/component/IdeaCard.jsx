@@ -22,7 +22,7 @@ const IdeaCard = ({ idea }) => {
   return (
     <div>
       <div className="hover:scale-105 duration-250 h-full ">
-        <div className="card bg-base-200 shadow-sm rounded-xl h-full flex flex-col">
+        <div className="card bg-gray-100 dark:bg-[#212121] shadow-sm rounded-xl h-full flex flex-col">
           <div className="w-full  h-50  overflow-hidden rounded-xl ">
             <Image
               src={imageUrl}
@@ -36,13 +36,13 @@ const IdeaCard = ({ idea }) => {
 
           <div className=" px-0 ">
             <h2 className="card-title font-bold text-lg">{title}</h2>
-            <h5 className="my-2 text-xs text-gray-600 pb-3 border-b border-gray-300">
-              <span className="font-semibold ">Targeted Audience: </span>
+            <h5 className="my-2 text-xs text-gray-600 dark:text-[#b5b5b5] pb-3 border-b border-gray-300">
+              <span className="font-extrabold">Targeted Audience: </span>
               {audience}{" "}
             </h5>
             <div className="flex flex-col justify-between items-start gap-3">
-              <h1 className="font-light text-sm">{shortDescription}</h1>
-              <p className="text-end ">Estimated Budget: $ {price}</p>
+              <h1 className="font-light text-gray-600 dark:text-[#b5b5b5] text-sm">{shortDescription}</h1>
+              <p className="text-end text-gray-600 dark:text-[#b5b5b5]">Estimated Budget: $ {price}</p>
             </div>
 
             {/* book now button  */}

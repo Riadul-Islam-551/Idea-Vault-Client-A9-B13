@@ -95,7 +95,7 @@ export function EditIdea({ idea }) {
                       <Label>Title</Label>
                       <Input
                         placeholder="AI-Powered Study Assistant"
-                        className="w-full  border-none shadow-none bg-base-300"
+                        className="w-full  border-none shadow-none bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       />
                       <FieldError />
                     </TextField>
@@ -112,7 +112,7 @@ export function EditIdea({ idea }) {
                       <Label>Tag </Label>
                       <Input
                         placeholder="tag"
-                        className="w-full border-none shadow-none bg-base-300"
+                        className="w-full border-none shadow-none bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       />
                       <FieldError />
                     </TextField>
@@ -125,7 +125,7 @@ export function EditIdea({ idea }) {
                         defaultValue={category}
                         name="category"
                         isRequired
-                        className="select w-full h-9 flex justify-start items-center bg-base-300 border-none rounded-xl"
+                        className="select w-full h-9 flex justify-start items-center bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent border-none rounded-xl"
                       >
                         <option className="text-gray-600 " disabled={true}>
                           Select Category
@@ -149,7 +149,7 @@ export function EditIdea({ idea }) {
                       <Label>Estimate Budget </Label>
                       <Input
                         placeholder="e.g., $1200"
-                        className="w-full border-none shadow-none bg-base-300"
+                        className="w-full border-none shadow-none bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       />
                       <FieldError />
                     </TextField>
@@ -164,7 +164,7 @@ export function EditIdea({ idea }) {
                       <Label>Targeted Audience</Label>
                       <Input
                         placeholder="Teenagers"
-                        className="w-full border-none shadow-none bg-base-300"
+                        className="w-full border-none shadow-none bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       />
                       <FieldError />
                     </TextField>
@@ -180,7 +180,7 @@ export function EditIdea({ idea }) {
                       <Label>Image Url</Label>
                       <Input
                         placeholder="https://example.com/image.jpg"
-                        className="w-full border-none shadow-none bg-base-300"
+                        className="w-full border-none shadow-none bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       />
                       <FieldError />
                     </TextField>
@@ -196,7 +196,7 @@ export function EditIdea({ idea }) {
                       <Label>Short Description</Label>
                       <Input
                         placeholder=""
-                        className="w-full border-none shadow-none bg-base-300"
+                        className="w-full border-none shadow-none bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       />
                       <FieldError />
                     </TextField>
@@ -213,7 +213,7 @@ export function EditIdea({ idea }) {
                       <TextArea
                         placeholder=""
                         rows={4}
-                        className="border-none shadow-none bg-base-300"
+                        className="border-none shadow-none bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       />
                       <Description>Maximum 1000 characters</Description>
                     </TextField>
@@ -230,7 +230,7 @@ export function EditIdea({ idea }) {
                       <TextArea
                         placeholder=""
                         rows={4}
-                        className="border-none shadow-none bg-base-300"
+                        className="border-none shadow-none bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       />
                       <Description>Maximum 1000 characters</Description>
                     </TextField>
@@ -247,7 +247,7 @@ export function EditIdea({ idea }) {
                       <TextArea
                         placeholder=""
                         rows={4}
-                        className="border-none shadow-none bg-base-300"
+                        className="border-none shadow-none bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       />
                       <Description>Maximum 1000 characters</Description>
                     </TextField>

@@ -7,7 +7,7 @@ const MyInteractionCommentCard = ({ commentData }) => {
     <div>
       <Card
         key={commentData._id}
-        className="w-full items-stretch md:flex-row bg-base-200 rounded-2xl"
+        className="w-full items-stretch md:flex-row bg-gray-100 dark:bg-[#212121] rounded-2xl"
       >
         <div className="relative h-35 shrink-0 overflow-hidden rounded-2xl sm:h-30 sm:30  ">
           <Image

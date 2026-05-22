@@ -61,18 +61,18 @@ const SignupPage = () => {
       <p className="text-gray-600 text-center text-sm mb-5 ">
         Share your innovative idea !
       </p>
-      <div className="card border  border-gray-200 max-w-2xl mx-auto">
+      <div className="card border  border-gray-300 dark:border-gray-700 max-w-2xl mx-auto">
         <Form className="flex flex-col gap-4" onSubmit={handleSubmit}>
           {/* name */}
           <TextField isRequired name="name" type="text">
             <Label>Name</Label>
-            <Input placeholder="Enter your name" className={"w-full "} />
+            <Input placeholder="Enter your name" className={"w-full bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"} />
             <FieldError />
           </TextField>
           {/* image url  */}
           <TextField isRequired name="image" type="text">
             <Label>Image URL</Label>
-            <Input placeholder="Image url" className={"w-full "} />
+            <Input placeholder="Image url" className={"w-full bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"} />
             <FieldError />
           </TextField>
           {/* email */}
@@ -88,7 +88,7 @@ const SignupPage = () => {
             }}
           >
             <Label>Email</Label>
-            <Input placeholder="john@example.com" className={"w-full "} />
+            <Input placeholder="john@example.com" className={"w-full bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"} />
             <FieldError />
           </TextField>
           {/* password  */}
@@ -111,7 +111,7 @@ const SignupPage = () => {
             }}
           >
             <Label>Password</Label>
-            <Input placeholder="Enter your password" className={"w-full "} />
+            <Input placeholder="Enter your password" className={"w-full bg-gray-100 dark:bg-[#212121]  focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent "} />
             <Description>
               Must be at least 8 characters with 1 uppercase and 1 number
             </Description>

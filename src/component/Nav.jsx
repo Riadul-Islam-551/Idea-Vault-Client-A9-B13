@@ -6,6 +6,7 @@ import Link from "next/link";
 import Navlinks from "./Navlinks";
 import { authClient } from "@/lib/auth-client";
 import { ViewProfile } from "./ViewProfile";
+import NavTheme from "./NavTheme";
 
 const Nav = () => {
   const { data: session } = authClient.useSession();
@@ -27,7 +28,7 @@ const Nav = () => {
     </>
   );
   return (
-    <div className="bg-base-100 shadow-sm">
+    <div className="bg-gray-100 dark:bg-[#212121] shadow-sm">
       <div className="navbar container mx-auto ">
         <div className="navbar-start w-[10%] md:w-[50%]">
           <div className="dropdown lg:hidden ">
@@ -74,40 +75,44 @@ const Nav = () => {
           </Link>
         </div>
 
-        <div className="navbar-end w-full md:w-[50%]">
-          {/* {session === null  ? (
-            <div className="navbar-end w-full md:w-[50%] flex justify-end">
-              <Spinner></Spinner>
-            </div>
-          ) :  */}
-          {user ? (
-            <>
-              <ViewProfile></ViewProfile>
-              <Button
-                variant="outline"
-                onClick={handleLogOut}
-                className={"ml-2"}
-              >
-                Logout
-              </Button>
-            </>
-          ) : (
-            <>
-              <Link href="/login">
-                <Button variant="outline" className={"text-xs md:text-sm"}>
-                  Login
-                </Button>
-              </Link>
-              <Link href="/registration">
-                <Button
-                  variant="outline"
-                  className={"text-xs md:text-sm ml-2 "}
-                >
-                  Registration
-                </Button>
-              </Link>
-            </>
-          )}
+        <div className="navbar-end items-center w-full md:w-[50%]">
+          <div>
+            {user ? (
+              <>
+                <div className="flex items-center">
+                  <ViewProfile></ViewProfile>
+                  <Button
+                    variant="outline"
+                    onClick={handleLogOut}
+                    className={"ml-3 "}
+                  >
+                    Logout
+                  </Button>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="flex items-center gap-2 ">
+                  <Link href="/login">
+                    <Button variant="outline" className={"text-xs md:text-sm"}>
+                      Login
+                    </Button>
+                  </Link>
+                  <Link href="/registration">
+                    <Button
+                      variant="outline"
+                      className={"text-xs md:text-sm ml-2 "}
+                    >
+                      Registration
+                    </Button>
+                  </Link>
+                </div>
+              </>
+            )}
+          </div>
+          <div className="bg-gray-300 dark:bg-gray-900  rounded-full ml-3 ">
+            <NavTheme></NavTheme>
+          </div>
         </div>
       </div>
     </div>

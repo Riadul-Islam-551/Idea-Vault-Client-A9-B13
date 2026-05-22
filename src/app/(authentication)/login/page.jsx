@@ -51,7 +51,7 @@ const LoginPage = () => {
       <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl text-center mb-12">
         Login Account
       </h1>
-      <div className="max-w-2xl mx-auto border border-gray-300 p-4 rounded-xl ">
+      <div className="max-w-2xl mx-auto border border-gray-300 dark:border-gray-700 p-4 rounded-xl ">
         <Form className="flex flex-col gap-4" onSubmit={handleSubmit}>
           {/* email */}
           <TextField
@@ -66,7 +66,12 @@ const LoginPage = () => {
             }}
           >
             <Label>Email</Label>
-            <Input placeholder="john@example.com" className={"w-full "} />
+            <Input
+              placeholder="john@example.com"
+              className={
+                "w-full bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              }
+            />
             <FieldError />
           </TextField>
           {/* password  */}
@@ -89,7 +94,12 @@ const LoginPage = () => {
             }}
           >
             <Label>Password</Label>
-            <Input placeholder="Enter your password" className={"w-full "} />
+            <Input
+              placeholder="Enter your password"
+              className={
+                "w-full bg-gray-100 dark:bg-[#212121] focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent "
+              }
+            />
             <Description>
               Must be at least 8 characters with 1 uppercase and 1 number
             </Description>

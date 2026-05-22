@@ -5,7 +5,7 @@ const TrendingIdea = async () => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/ideas?limit=3`);
   const ideaData = await res.json();
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 mb-20 ">
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mt-36  mb-12  ">
         Trending Ideas
       </h1>

@@ -51,7 +51,7 @@ const MyInteractionsPage = async () => {
             ))}
           </div>
         ) : (
-          <div className="min-h-100 flex justify-center items-center flex-col border border-gray-300 rounded-2xl px-4">
+          <div className="min-h-100 flex justify-center items-center flex-col border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-[#212121] rounded-2xl px-4">
             <h1 className="font-bold text-2xl md:text-3xl lg:text-4xl mb-4 ">
               You don&apos;t make any Interactions{" "}
             </h1>
@@ -59,7 +59,7 @@ const MyInteractionsPage = async () => {
               <Button
                 variant="outline"
                 className={
-                  "text-orange-500 border-orange-500 rounded space-x-1"
+                  "text-orange-500 border-orange-500 space-x-1"
                 }
               >
                 <ArrowLeft></ArrowLeft>Explore Idea
