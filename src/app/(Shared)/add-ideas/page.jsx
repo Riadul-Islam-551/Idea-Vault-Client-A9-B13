@@ -45,18 +45,22 @@ const AddIdeaPage = () => {
 
     // console.log(idea);
 
-    console.log(destinationData);
+    //token for client component
+    const { data: tokenData } = await authClient.token();
+    console.log(tokenData);
+
 
     const res = await fetch("http://localhost:5000/ideas", {
       method: "POST",
       headers: {
         "content-type": "application/json",
+        authorization: `Bearer ${tokenData?.token}`,
       },
       body: JSON.stringify(idea),
     });
 
     const data = await res.json();
-    toast.success('Discover your idea successfully !')
+    toast.success("Discover your idea successfully !");
 
     redirect("/myIdeas");
     // console.log(data);

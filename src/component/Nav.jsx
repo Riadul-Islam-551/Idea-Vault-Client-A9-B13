@@ -14,6 +14,7 @@ const Nav = () => {
 
   const handleLogOut = async () => {
     await authClient.signOut();
+    window.location.reload();
   };
 
   const links = (
@@ -79,7 +80,7 @@ const Nav = () => {
               <Spinner></Spinner>
             </div>
           ) :  */}
-          { user ? (
+          {user ? (
             <>
               <ViewProfile></ViewProfile>
               <Button

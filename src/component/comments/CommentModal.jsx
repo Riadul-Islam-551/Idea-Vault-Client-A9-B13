@@ -33,10 +33,15 @@ export function CommentModal({ ideaDetails }) {
     };
     // console.log("comment", commentData);
 
+    //token for client component
+    const { data: tokenData } = await authClient.token();
+    console.log(tokenData);
+
     const res = await fetch("http://localhost:5000/comments", {
       method: "POST",
       headers: {
         "content-type": "application/json",
+        authorization: `Bearer ${tokenData?.token}`,
       },
       body: JSON.stringify(commentData),
     });

@@ -1,5 +1,6 @@
 "use client";
 
+import { authClient } from "@/lib/auth-client";
 import { Check, Envelope, Pencil } from "@gravity-ui/icons";
 import {
   Button,
@@ -39,10 +40,15 @@ export function EditIdea({ idea }) {
     const ideaData = Object.fromEntries(formData.entries());
     // console.log(ideaData);
 
+    //token for client component
+    const { data: tokenData } = await authClient.token();
+    console.log(tokenData);
+
     const res = await fetch(`http://localhost:5000/ideas/${_id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
+        authorization: `Bearer ${tokenData?.token}`,
       },
       body: JSON.stringify(ideaData),
     });

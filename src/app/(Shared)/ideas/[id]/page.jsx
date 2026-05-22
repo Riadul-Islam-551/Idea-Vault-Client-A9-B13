@@ -1,6 +1,8 @@
 import CommentSection from "@/component/comments/CommentSection";
+import { auth } from "@/lib/auth";
 import { ArrowLeft, PinFill } from "@gravity-ui/icons";
 import { Button, Calendar } from "@heroui/react";
+import { headers } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -8,9 +10,16 @@ import React from "react";
 const DetailedIdea = async ({ params }) => {
   const { id } = await params;
   //   console.log("id", id);
+  
+  // token for server component 
+  const { token } = await auth.api.getToken({
+    headers: await headers(),
+  });
+  console.log(token);
+
   const res = await fetch(`http://localhost:5000/ideas/details/${id}`, {
     headers: {
-      authorization: "logged in",
+      authorization: `Bearer ${token}`,
     },
   });
   const ideaDetails = await res.json();

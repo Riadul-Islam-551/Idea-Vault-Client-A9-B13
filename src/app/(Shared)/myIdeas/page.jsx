@@ -13,7 +13,17 @@ const MyIdeasPage = async () => {
   const myId = session?.user?.id;
   // console.log(myId);
 
-  const res = await fetch(`http://localhost:5000/ideas/${myId}`);
+  //token for server component
+  const { token } = await auth.api.getToken({
+    headers: await headers(),
+  });
+  console.log(token);
+
+  const res = await fetch(`http://localhost:5000/ideas/${myId}`, {
+    headers: {
+      authorization: `Bearer ${token}`,
+    },
+  });
   const myIdea = await res.json();
 
   // console.log(myIdea);

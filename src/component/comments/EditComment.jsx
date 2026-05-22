@@ -3,6 +3,7 @@ import React from "react";
 import { Envelope } from "@gravity-ui/icons";
 import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
 import toast from "react-hot-toast";
+import { authClient } from "@/lib/auth-client";
 
 const EditComment = ({ comment }) => {
   //   console.log(comment);
@@ -24,10 +25,15 @@ const EditComment = ({ comment }) => {
     console.log("comment", commentData);
     // console.log(_id);
 
+    //token for client component
+    const { data: tokenData } = await authClient.token();
+    console.log(tokenData);
+
     const res = await fetch(`http://localhost:5000/comments/${_id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
+        authorization: `Bearer ${tokenData?.token}`,
       },
       body: JSON.stringify(commentData),
     });
