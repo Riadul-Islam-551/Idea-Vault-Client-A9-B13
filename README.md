@@ -1,11 +1,5 @@
 # Idea Vault (Client)
-
-Professional client for Idea Vault — a Next.js + Tailwind CSS frontend for submitting, viewing and interacting with ideas.
-
-## Badges
-
-- Build: N/A
-- License: MIT
+[Live site](https://idea-vault-client-lovat.vercel.app)
 
 ## Table of Contents
 
@@ -22,13 +16,17 @@ Professional client for Idea Vault — a Next.js + Tailwind CSS frontend for sub
 
 ## About
 
-Idea Vault (Client) is the frontend application for an ideas sharing platform. It provides authentication, idea creation, browsing, commenting, and profile management with a modern responsive UI built using Next.js and Tailwind CSS.
+IdeaVault is a web-based platform where users can share innovative startup ideas, explore ideas posted by others and engage through comments and discussions. The system encourages creativity, collaboration and validation of ideas through community interaction.
+Instead of booking or scheduling, the platform focuses on idea validation and engagement, allowing users to discover trending ideas, provide feedback and refine concepts collectively.
+
 
 ## Tech Stack
 
 - Next.js 13+
 - React 19
-- Tailwind CSS + DaisyUI
+- Tailwind CSS + DaisyUI + HeroUI
+- Node.js
+- Express.js
 - MongoDB (backend)
 
 ## Features
