@@ -1,3 +1,121 @@
+# Idea Vault (Client)
+
+Professional client for Idea Vault — a Next.js + Tailwind CSS frontend for submitting, viewing and interacting with ideas.
+
+## Badges
+
+- Build: N/A
+- License: MIT
+
+## Table of Contents
+
+- [About](#about)
+- [Tech Stack](#tech-stack)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Environment Variables](#environment-variables)
+- [Project Structure](#project-structure)
+- [Scripts](#scripts)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
+
+## About
+
+Idea Vault (Client) is the frontend application for an ideas sharing platform. It provides authentication, idea creation, browsing, commenting, and profile management with a modern responsive UI built using Next.js and Tailwind CSS.
+
+## Tech Stack
+
+- Next.js 13+
+- React 19
+- Tailwind CSS + DaisyUI
+- MongoDB (backend)
+
+## Features
+
+- Sign up / Login flow
+- Create, edit, delete ideas
+- Commenting and interactions
+- User profiles and activity pages
+- Responsive UI and dark/light theme support
+
+## Getting Started
+
+Prerequisites
+
+- Node.js 18+ or newer
+- npm (or yarn)
+
+Installation
+
+```bash
+npm install
+```
+
+Run locally
+
+```bash
+npm run dev
+```
+
+Build for production
+
+```bash
+npm run build
+npm start
+```
+
+## Environment Variables
+
+Create a `.env.local` file in the project root and add values used by your API/backend. Common variables this client expects:
+
+- `NEXT_PUBLIC_API_URL` — Base URL of the backend API (e.g. `http://localhost:4000`)
+- `NEXT_PUBLIC_PROXY` — (optional) Proxy URL if you run a dev proxy
+
+Adjust names and values to match your backend implementation.
+
+## Project Structure
+
+- `src/app/` — Next.js app routes and pages
+- `src/component/` — Reusable React components
+- `src/lib/` — Client helpers for auth and session
+- `public/` — Static assets
+- `package.json` — Project metadata and scripts
+
+See the codebase for more details on components and API routes.
+
+## Scripts
+
+The available npm scripts are:
+
+- `npm run dev` — Run development server
+- `npm run build` — Build for production
+- `npm run start` — Start built app
+- `npm run lint` — Run ESLint checks
+
+These are defined in [package.json](package.json).
+
+## Deployment
+
+This project is compatible with Vercel or any Node.js hosting that supports Next.js. Typical steps:
+
+1. Create a production build with `npm run build`.
+2. Set environment variables on the hosting platform.
+3. Run `npm run start` (if not using serverless/standalone hosting).
+
+For Vercel, connect the repository and set the build command to `npm run build` and the output to the default Next.js settings.
+
+## Contributing
+
+Contributions are welcome. Please open issues for bugs or feature requests and submit PRs for improvements. Keep changes focused and add relevant tests where applicable.
+
+## License
+
+This project is provided under the MIT License.
+
+---
+
+If you want, I can expand sections (environment, screenshots, API docs) or add badges and examples. 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
