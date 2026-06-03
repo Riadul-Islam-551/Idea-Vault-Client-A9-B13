@@ -1,4 +1,4 @@
-# Idea Vault (Client)
+# Idea Vault - Share Your Startup Ideas
 [Live site](https://idea-vault-client-lovat.vercel.app)
 
 ## Table of Contents
