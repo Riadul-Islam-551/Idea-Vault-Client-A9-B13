@@ -10,7 +10,7 @@ const Methodology = () => {
         </span>
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">Services</h1>
         <p className="text-gray-500 dark:text-[#b5b5b5] text-center mt-3 mb-8 max-w-xl mx-auto leading-relaxed">
-          By the end of the services, you don't just have an idea —{" "}
+          By the end of the services, you don&apos;t just have an idea —{" "}
           <br className="hidden md:block" />
           you have a validated concept shaped by real feedback from a creative
           community.
@@ -20,10 +20,10 @@ const Methodology = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6 gap-8">
         {/* Service 1 — Discover Ideas */}
         <div className="hover-3d">
-          <div className="card relative overflow-hidden rounded-2xl border border-indigo-200 dark:border-indigo-800 bg-indigo-50 dark:bg-indigo-950 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_16px_40px_rgba(99,102,241,0.2)]">
+          <div className="card relative overflow-hidden rounded-2xl border border-indigo-200 dark:border-indigo-800 bg-indigo-50 dark:bg-indigo-950 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_16px_40px_rgba(99,102,241,0.1)]">
             <div className="card-body">
               {/* Decorative circle */}
-              <div className="absolute -bottom-5 -right-5 w-24 h-24 rounded-full bg-indigo-400 opacity-10 pointer-events-none" />
+              {/* <div className="absolute -bottom-5 -right-5 w-24 h-24 rounded-full bg-indigo-400 opacity-10 pointer-events-none" /> */}
 
               {/* Icon */}
               <div className="w-12 h-12 rounded-xl bg-indigo-600 flex items-center justify-center mb-4 text-white text-xl">
@@ -66,14 +66,14 @@ const Methodology = () => {
               </div>
             </div>
           </div>
+          {/* <div></div>
           <div></div>
           <div></div>
           <div></div>
           <div></div>
           <div></div>
           <div></div>
-          <div></div>
-          <div></div>
+          <div></div> */}
         </div>
 
         {/* Service 2 — Share Your Idea */}
