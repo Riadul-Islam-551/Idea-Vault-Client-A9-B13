@@ -42,11 +42,11 @@ const SignupPage = () => {
     // console.log(user);
   };
 
-  // const handleGoogleSignin = async () => {
-  //   await authClient.signIn.social({
-  //     provider: "google",
-  //   });
-  // };
+  const handleGoogleSignin = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
+  };
 
   const handleGoogleSign = async () => {
     await authClient.signIn.social({
