@@ -87,7 +87,7 @@ const Methodology = () => {
               </div>
 
               <span className="inline-block text-[10px] font-bold uppercase tracking-widest bg-emerald-200 dark:bg-emerald-800 text-emerald-800 dark:text-emerald-200 px-3 py-1 rounded-full mb-3">
-                Step 02
+                Step 02 
               </span>
 
               <h2 className="card-title text-emerald-900 dark:text-emerald-100">
