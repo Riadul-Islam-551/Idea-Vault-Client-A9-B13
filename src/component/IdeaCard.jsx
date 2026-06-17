@@ -30,7 +30,7 @@ const IdeaCard = ({ idea, index = 0 }) => {
       <div className="hover:-translate-y-2 duration-300 transition-all h-full rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1c1c1c] shadow-sm hover:shadow-[0_16px_40px_rgba(249,115,22,0.15)] flex flex-col overflow-hidden">
 
         {/* Image */}
-        <div className="relative w-full h-48 overflow-hidden bg-orange-50 dark:bg-orange-950">
+        <div className=" w-full h-48 overflow-hidden bg-orange-50 dark:bg-orange-950">
           <Image
             src={imageUrl}
             alt={title}
@@ -38,16 +38,6 @@ const IdeaCard = ({ idea, index = 0 }) => {
             height={200}
             className="w-full h-full object-cover"
           />
-          {/* Rank badge */}
-          <span className="absolute top-3 left-3 w-7 h-7 rounded-full bg-orange-500 text-white text-xs font-extrabold flex items-center justify-center shadow-md">
-            #{index + 1}
-          </span>
-          {/* Hot badge for rank #1 only */}
-          {index === 0 && (
-            <span className="absolute top-3 right-3 bg-white/95 dark:bg-black/80 text-red-600 dark:text-red-400 text-[10px] font-bold px-2.5 py-1 rounded-full border border-red-100 dark:border-red-900">
-              🔥 Hot
-            </span>
-          )}
         </div>
 
         {/* Card body */}
